@@ -1,0 +1,81 @@
+<body>
+    <div class="container">
+      <div class="title">Welcome User</div>
+      <div class="content">
+        <form action="#">
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details">First Name: {{userFirstname}}</span>
+            </div>
+            <div class="input-box">
+              <span class="details">Last Name: {{userLastname}}</span>
+            </div>
+            <div class="input-box">
+                <span class="details">ID: {{userId}}</span>
+              </div>
+            <div class="input-box">
+              <span class="details">Email: {{userEmail}}</span>
+            </div>
+            <div class="input-box">
+              <span class="details">Role: {{userRole}}</span>
+            </div>
+            <div class="input-box">
+              <span class="details">Password: {{userPassword}}</span>
+            </div>
+          </div>
+          <label class="user-details">Update Password:</label>
+            <input id="user-password" class="form-content" type="password" name="password" [(ngModel)]="updatepassword" autocomplete="on" required />
+            &nbsp; &nbsp; <label class="updateButton" (click)="updatePassword()">Update</label>
+        </form>
+        <br>
+        <hr>
+        <br>
+        <div class="title">All Users</div>
+        <br>
+        <table class="userdetails">
+          <tr>
+            <th>User ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+          </tr>
+          <tr *ngFor="let user of allUsers;">
+            <td>{{user.userId}}</td>
+            <td>{{user.firstName}}</td>
+            <td>{{user.lastName}}</td>
+            <td>{{user.email}}</td>
+          </tr>
+        </table>
+        <br>
+        <hr>
+        <br>
+        <div class="title">All Courses</div>
+        <br>
+        <table class="coursedetails">
+          <tr>
+            <th>Course ID</th>
+            <th>Course Name</th>
+          </tr>
+          <tr *ngFor="let course of allCourses;">
+            <td>{{course.cId}}</td>
+            <td>{{course.courses}}</td>
+          </tr>
+        </table>
+        <br>
+        <div>
+            <div class="title">Request for a Courses</div>
+            <table class="coursedetails">
+              <tr>
+                <th>Courses Name</th>
+                <td><input class="form-content" type="text" name="courses" [(ngModel)]="courses"/></td>
+                <td><input id="submit-btn" (click)="requestCourses()" type="submit" name="submit" value="Request"/></td>
+              </tr>
+            </table>
+            
+          </div>
+
+        <br>
+        <label type="button" class="logout" (click)="homePage()">Logout</label>
+      </div>
+    </div>
+  </body>

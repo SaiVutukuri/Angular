@@ -1,0 +1,31 @@
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #228B22;
+    color: white;
+    font-weight: 600;
+    padding-right: 20px;
+  }
+
+  
+  
+   .spacer {
+    flex: 1;
+  }
+/*
+ .gap {
+  padding-right: 20px;
+ } */
+
+ .green {
+  background-color: #228B22;
+}
+
+.red {
+  background-color: rgb(70, 70, 255)
+}
